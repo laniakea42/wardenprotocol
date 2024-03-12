@@ -16,6 +16,7 @@ import { Copy } from "./ui/copy";
 import ReceiveAssetButton from "./receive-asset-button";
 import { MoveUpRight, KeyIcon } from "lucide-react";
 import NewKeyButton from "./new-key-button";
+import AddToMetaMaskButton from "./add-to-metamask-button";
 
 export default function Keys({ spaceId }: { spaceId: string }) {
 	const { QueryKeys } = useWardenWarden();
@@ -126,6 +127,7 @@ function Key({
 									</div>
 								</div>
 								<div className="flex flex-row gap-4">
+									<AddToMetaMaskButton keyId={keyData.id} />
 									<ReceiveAssetButton
 										address={wallet.address}
 									/>
