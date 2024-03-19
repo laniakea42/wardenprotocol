@@ -17,6 +17,16 @@ message GenesisState {
     (amino.dont_omitempty) = true
   ];
 
-  repeated Keychain keychains = 2;
-  repeated Space spaces = 3;
+  repeated KVPair kv = 2 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+
+  repeated Keychain keychains = 3;
+  repeated Space spaces = 4;
+}
+
+message KVPair {
+  bytes key = 1;
+  bytes value = 2;
 }

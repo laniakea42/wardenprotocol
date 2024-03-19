@@ -14,4 +14,14 @@ message GenesisState {
     (gogoproto.nullable) = false,
     (amino.dont_omitempty) = true
   ];
+
+  repeated KVPair kv = 2 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
+
+message KVPair {
+  bytes key = 1;
+  bytes value = 2;
 }
