@@ -2,6 +2,7 @@
 import NewIntentButton from "@/components/new-intent-button";
 import clsx from "clsx";
 import { useState } from "react";
+import Portal from "../components/ui/portal";
 import CreateIntent from "../components/create-intent";
 
 function IntentsPage() {
@@ -9,6 +10,7 @@ function IntentsPage() {
 	const [isIntentActive, setIsIntentActive] = useState(false);
 	return (
 		<div className="flex flex-col flex-1 h-full px-8 py-4 space-y-8">
+			<Portal domId="intent-modal">123</Portal>
 			<div className="flex items-center justify-between pb-4 space-y-2">
 				<div>
 					<h2 className="text-4xl">Intents</h2>
